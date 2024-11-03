@@ -1,0 +1,20 @@
+﻿@model Film
+
+<h2>Edytuj film</h2>
+<form asp-action="Edit" method="post">
+    @Html.AntiForgeryToken()
+    <div >
+        <label asp-for="Name"></label>
+        <input asp-for="Name"  />
+    </div>
+    <div >
+        <label asp-for="Description"></label>
+        <input asp-for="Description" />
+    </div>
+    <div >
+        <label asp-for="Price"></label>
+        <input asp-for="Price" class="form-control" />
+    </div>
+    <input type="submit" value="Zapisz"  />
+    <a asp-action="Index" >Anuluj</a>
+</form>
